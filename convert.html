@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>CONVERT</title>
+</head>
+<script>
+	function convertd()
+	{
+		let x = document.getElementById("km").value
+		let y = x * 0.621371;
+		document.getElementById("km").value = y 
+	}
+	function convertw()
+	{
+		let x = document.getElementById("wt").value
+		let y = x * 2.20462;
+		document.getElementById("wt").value = y 
+	}
+	function clr()
+	{
+		document.getElementById("wt").value = " "
+		document.getElementById("km").value = " "
+	}
+</script>
+<style>
+	.conv{
+	margin: 10% 30% 20% 30%;
+	}
+	
+	input[type="button"]{
+	width: 100%;
+	}
+</style>
+<body>
+	<div class=conv>
+	<table cellpadding="5" cellspacing="10" border="2">
+	<tr>
+		<td colspan="4"><input type="text" id="km" placeholder="Enter Distance in Kilometer"></td>
+		<td><input type="button" value="MILES" onclick=convertd()></td>
+		<td rowspan="2"><input type="button" value="CLEAR" onclick=clr()></td>
+	</tr>
+	<tr>
+		<td colspan="4"><input type="text" id="wt" placeholder="Enter Weight in Kilograms"></td>
+		<td><input type="button" value="POUNDS" onclick=convertw()></td>
+	</tr>
+	</table>
+	</div>
+</body>
+</html>

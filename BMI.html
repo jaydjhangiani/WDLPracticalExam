@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>BMI</title>
+</head>
+<script>
+	function convert(){
+		let h = document.getElementById("ht").value
+		let w = document.getElementById("wt").value
+		let x = h*h
+		let ans = w / x
+		document.getElementById("bm").value = ans
+	}
+	function clr()
+	{
+		document.getElementById("wt").value = " "
+		document.getElementById("ht").value = " "
+		document.getElementById("bm").value = " "
+		
+	}
+	
+</script>
+<style>
+	.bmi{
+	margin: 10% 30% 30% 35%
+	}
+	input[type="text"]{
+	width: 100%;
+	}
+</style>
+<body>
+	<div class="bmi">
+	<table cellspacing="10" cellpadding="5" border="2">
+	<tr>
+		<td colspan=4><input type="text" id="ht" placeholder="Enter Height"></td>
+	</tr>
+	<tr>
+		<td colspan=4><input type="text" id="wt" placeholder="Enter Weight"></td>
+	</tr>
+	<tr>
+		<td colspan=2><input type="text" id="bm" placeholder="Body Mass Indes Is"></td>
+		<td><input type="button" value="BMI" onclick="convert()"></td>
+		<td><input type="button" value="CLEAR" onclick="clr()"></td>
+	</tr>
+	</table>
+	</div>
+</body>
+</html>

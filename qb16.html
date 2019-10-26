@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>QB 16</title>
+</head>
+<script>
+	function ChangeTextClr(){
+		var color = document.getElementById("textcolors")
+		var choice = color.options[color.selectedIndex].value 
+  		document.getElementById("bs").style.color = choice
+  	
+  	}
+  	
+  	function ChangeBClr(){
+  		var color = document.getElementById("backgroundcolors")
+  		var choice = color.options[color.selectedIndex].value
+  		document.body.style.background = choice
+  	}
+</script>
+<style>
+	p{
+		font-size: 20px;
+		text-align: justify;
+	}
+	
+	select{
+		font-size: 20px;
+	}
+	
+</style>
+<body>
+	<div id = "bs">
+	<br><br>
+	<p>The purpose of the report is to analyse the factors influencing food choices and purchases.In this survey we broadly classify the decisions and actions that influence purchase behaviour of the customer.A questionnaire was prepared, circulated and collected from people living in different regions in Mumbai. Survey will provide detailed information about factors which influence a person to buy a certain food product.Surveys like these do not only help us understand the choices made in current scenario but  also predict future trends.In order to get a clear understanding we emphasize on the factors like Cost, Quality,Quantity,Advertisement,Convenience and Brand.</p>
+	<br><br>
+	<table cellspacing="10" align="center">
+	<tr>
+	<td><select id="textcolors" onchange="ChangeTextClr()">
+		<option>SELECT TEXT COLOR</option>
+		<option value = "blue" >BLUE</option>
+		<option value = "red">RED</option>
+		<option value = "white">WHITE</option>
+	<select></td>
+	<td><select id="backgroundcolors" onchange="ChangeBClr()">
+		<option>SELECT BACKGROUND COLOR</option>
+		<option value = "blue">BLUE</option>
+		<option value = "red">RED</option>
+		<option value = "black">BLACK</option>
+		<option value = "pink">PINK</option>
+		<option value = "purple">PURPLE</option>
+	<select></td>
+	</tr>
+	</table>
+	</div>
+</body>
+</html>
