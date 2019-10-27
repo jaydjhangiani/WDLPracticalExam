@@ -16,17 +16,45 @@
 	font-size: 20px;
 	padding: 5px 5px;
 	margin: 2% 22%;
-	
 	}
 </style>
+<script>
+	function prime(){
+		let x = document.getElementById("fnum").value
+		let y = document.getElementById("snum").value
+		while(x<y)
+		{
+			count=0
+			for(let i=1;i<x;i++)
+			{
+				
+				if(x%i===0)
+				{
+					count++
+				}
+			}
+		
+		if(count < 3)
+		document.getElementById("prim").value += (x+", ")
+		x++
+		}
+	}
+	
+	function clr(){
+		document.getElementById("prim").value = ""
+	}
+
+</script>
 <body>
 	<div class = "pno">
-	<form action = "prime.php" method="post"><br>
+	<form><br>
 	<label>Enter First Number</label></td><br><br>
-	<input type="text" name = "fnum"></td><br><br>
+	<input type="text" id = "fnum"></td><br><br>
 	<label>Enter Second Number</label></td><br><br>
-	<input type="text" name = "snum"></td><br><br>
-	<button type="submit">SUBMIT</button>
+	<input type="text" id = "snum"></td><br><br>
+	<input type="button" value="submit" id="submit" onclick="prime()"><br><br>
+	<input type="button" value="Clear" id="clear" onclick="clr()"><br><br>
+	<textarea id="prim"> </textarea>
 	</form>
 	
 </body>
