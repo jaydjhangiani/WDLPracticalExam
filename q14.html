@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Toy Library</title>
+</head>
+<script>
+	function bill(){
+		let x = document.getElementById("toys").value
+		let y = document.getElementById("quant").value
+		
+		if(x==="lego")
+		{
+			let z = y*2
+			document.getElementById("billing").value = x +" $"+ y+" "+"Total amount = "+z
+		}
+		if(x==="cars")
+		{
+			let z = y*3
+			document.getElementById("billing").value = x +" $"+ y+" "+"Total amount = "+z
+		}
+		if(x==="teddy")
+		{
+			let z = y*1
+			document.getElementById("billing").value = x +" $"+ y+" "+"Total amount = "+z
+		}
+			
+		
+			
+	}
+</script>
+<body>
+	<table cellspacing="10" cellpadding="5" border=2>
+		<tr>
+			<td>
+				<select value="toys" id="toys">
+				<option>Toys</options>
+				<option value="lego">Lego ($2)</option>
+				<option value="cars">Cars ($3)</option>
+				<option value="teddy">Teddy Bears ($1)</option>
+			</td>
+		
+			<td>Enter Quantity : </td>
+		
+			<td><input type="text" name="quant" id="quant"></td>
+			
+			<td rowspan=2><input type="button" value="Generate Bill" onclick="bill()"></td>
+		</tr>
+		<tr>
+		<td colspan=3><textarea id="billing"></textarea></td>
+		</tr>
+	</table>
+	
+</body>
+</html>
