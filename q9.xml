@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="q9.xsl"?>
+<!DOCTYPE grocery SYSTEM "q9.dtd">
+<groceries>
+	<grocery>
+		<item>WEED</item>
+		<quantity>100gms</quantity>
+		<price>$420</price>
+		<brand>A.S.</brand>
+		</grocery>
+		<grocery>
+		<item>NICOTINE PATCHES</item>
+		<quantity>3</quantity>
+		<price>$300</price>
+		<brand>Holmes</brand>
+		</grocery>
+		<grocery>
+		<item>LSD STRIPS</item>
+		<quantity>10</quantity>
+		<price>$690</price>
+		<brand>MICKEY</brand>
+		</grocery>
+</groceries>
