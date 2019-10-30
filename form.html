@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>BS</title>
+</head>
+<script>
+
+
+		
+		function checkpass(){
+			
+			let pass = document.getElementById("pass").value
+		    if(pass === ""){
+			alert("empty pass")
+			return false}
+			
+			let reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+			if(reg.test(pass) === false){
+			alert("Pls check")
+			return false
+			}
+			return true
+			}
+			
+		function checkname(){
+			
+			let name = document.getElementById("name").value
+			
+			let reg = /^[A-Za-z]+$/
+			
+			if (name === ""){
+				alert("Pls Enter")
+				return false}
+			
+			if (reg.test(name)===false){
+				alert("Enter correctly")
+				return false}
+						
+			return true
+		
+		}
+		
+		function checkuname(){
+			let uname = document.getElementById("uname").value
+			
+			let reg = /^[A-Za-z0-9!@#$%^&*]{8,12}+$/
+			
+			if (name === ""){
+				alert("Empty")
+				return false}
+			
+			if (reg.test(uname)===false){
+				alert("Enter correctly")
+				return false}
+						
+			return true
+		
+		}
+
+		function checkmail(){
+		let mail = document.getElementById("email").value	
+		 if(mail==="")
+		 	{
+		 		alert("empty")
+		 		return false
+		 	}
+		 let reg = /^[^@]+@[^@]+\.[^@]+$/	
+		 if(reg.test(mail)===false)	
+		 {
+		 	alert("incorrect")
+		 	return false
+		 }
+		 return true
+		 }
+
+	
+		
+</script>
+<body>
+	<form id="form1" onsubmit="checkname() && checkpass()">
+		<label>Name</label>
+		<input type="text" id="name"><br><br>
+		<label>Password</label>
+		<input type="text" id="pass"><br><br>
+		<label>Email</label>
+		<input type="text" id="email"><br><br>
+		<label>Username</label>
+		<input type="text" id="uname"><br><br>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>
