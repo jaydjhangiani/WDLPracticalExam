@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Game</title>
+</head>
+<script src="game.js"></script>
+<body>
+	<div class = "bs">
+	<h2>Guess the code</h2>
+		<form action="">
+			<table>
+				<tr>
+				<td><input type="number" id="one" name="one"></td>
+				<td><input type="number" id="two" name="two"></td>
+				<td><input type="number" id="three" name="three"></td>
+				<td><input type="number" id="four" name="four"></td>
+				<td>
+					<label id="attempts">5</label>
+					<label>Attempts Left</label>
+				</td>
+				</tr>
+				<tr>
+					<td><label for "op" id="one-text"></lable></td>
+					<td><label for "op" id="two-text"></lable></td>
+					<td><label for "op" id="three-text"></lable></td>
+					<td><label for "op" id="four-text"></lable></td>
+				</tr>
+			</table>
+			<input type="submit" id="guess" value="GUESS" onclick="return checkguess()">
+			<input type="submit" id="shuffle" value="SHUFFLE" onclick="return checkshuffle()">
+			<h2 id="luck"></h2>
+		</form>
+	</div>
+</body>
+</html>
